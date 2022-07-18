@@ -1,12 +1,16 @@
 import { defineConfig, normalizePath } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import * as path from 'path'
+import Unocss from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // index.html所在目录, 默认为process.cwd()
   // root: path.join(process.cwd(), 'src'),
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Unocss(),
+  ],
   resolve: {
     // 别名，@rollup/plugin-alias的入口
     alias: [
