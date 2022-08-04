@@ -30,6 +30,8 @@ module.exports = {
     // 单规则设置
     'prettier/prettier': 'warn', // 注意要加上这一句，开启 prettier 自动修复的功能
     '@typescript-eslint/no-explicit-any': 'error', // 禁止使用any
+    '@typescript-eslint/no-unused-vars': 'off', // 允许引入未使用变量
+    'vue/multi-word-component-names': 'off', // vue 组件名单词数
   },
   globals: {
     // 不可重写
