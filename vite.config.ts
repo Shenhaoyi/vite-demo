@@ -3,12 +3,23 @@ import vue from '@vitejs/plugin-vue';
 import * as path from 'path';
 import Unocss from 'unocss/vite';
 import viteEslint from 'vite-plugin-eslint';
+import viteStylelint from 'vite-plugin-stylelint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // index.html所在目录, 默认为process.cwd()
   // root: path.join(process.cwd(), 'src'),
-  plugins: [vue(), Unocss(), viteEslint()],
+  plugins: [
+    vue(),
+    Unocss(),
+    viteEslint({
+      fix: true, // 自动修复
+    }),
+    viteStylelint({
+      // 问题: 为什么自动修复的内容，vscode没有给出提示
+      fix: true,
+    }),
+  ],
   resolve: {
     // 别名，@rollup/plugin-alias的入口
     alias: [
