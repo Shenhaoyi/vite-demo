@@ -7,9 +7,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .gitignore --fix",
-    "lint:style": "stylelint src/**/*.*ss --ignore-path .gitignore --fix",
+    "lint:style": "stylelint src/**/*.{html,vue,css,sass,scss,less} --ignore-path .gitignore --fix",
     "lint": "npm run lint:script && npm run lint:style",
-    "postinstall": "husky install"
+    "prepare": "husky install"
   },
   "dependencies": {
     "less": "^4.1.3",
@@ -31,6 +31,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
@@ -53,5 +54,20 @@
   },
   "husky": {
     "pre-commit": "npm run lint"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.vue": [
+      "stylelint --fix",
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{less,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
   }
 }
