@@ -25,7 +25,7 @@ export default defineConfig({
     alias: [
       {
         find: /@\//,
-        replacement: path.join(process.cwd(), 'src'),
+        replacement: path.join(process.cwd(), 'src/'), // 匹配到 / 就要带上
       },
     ],
   },
