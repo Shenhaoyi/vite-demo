@@ -60,9 +60,6 @@
     "vite-plugin-stylelint": "^3.0.6",
     "vue-tsc": "^0.34.7"
   },
-  "husky": {
-    "pre-commit": "npm run lint"
-  },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "prettier --write",
