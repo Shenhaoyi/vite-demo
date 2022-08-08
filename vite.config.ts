@@ -6,10 +6,15 @@ import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
 import svgLoader from 'vite-svg-loader';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+const CDN_URL = 'xxx'; // build 的 url
+
 // https://vitejs.dev/config/
 export default defineConfig({
   // index.html所在目录, 默认为process.cwd()
   // root: path.join(process.cwd(), 'src'),
+  base: isProduction ? CDN_URL : '/',
   plugins: [
     vue(),
     Unocss(),
