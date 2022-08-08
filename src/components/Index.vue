@@ -9,7 +9,9 @@
 
 <script lang="ts" setup>
 import logo from '@/assets/logo.png';
-import Icon from '@/assets/union.svg';
+import Icon from '@/assets/union.svg?inline';
+import test from '@/config/test.json';
+console.log(test);
 </script>
 
 <style lang="less" scoped>
