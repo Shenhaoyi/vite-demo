@@ -4,10 +4,12 @@
   <div class="i-ep-search" shen></div>
   <img :src="logo" />
   <div class="test3"></div>
+  <Icon></Icon>
 </template>
 
 <script lang="ts" setup>
 import logo from '@/assets/logo.png';
+import Icon from '@/assets/union.svg';
 </script>
 
 <style lang="less" scoped>

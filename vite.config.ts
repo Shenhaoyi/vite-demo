@@ -1,9 +1,10 @@
-import { defineConfig, normalizePath } from 'vite';
+import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import * as path from 'path';
 import Unocss from 'unocss/vite';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
+import svgLoader from 'vite-svg-loader';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
       // 问题: 为什么自动修复的内容，vscode没有给出提示
       fix: true,
     }),
+    svgLoader(),
   ],
   resolve: {
     // 别名，@rollup/plugin-alias的入口
