@@ -9,9 +9,11 @@
 
 <script lang="ts" setup>
 import logo from '@/assets/logo.png';
-import Icon from '@/assets/union.svg?inline';
+import Icon from '@/assets/union.svg';
 import test from '@/config/test.json';
+import fib from 'virtual:fib';
 console.log(test);
+console.log('shen log: ', { fib5: fib(5) });
 </script>
 
 <style lang="less" scoped>

@@ -5,6 +5,7 @@ import Unocss from 'unocss/vite';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
 import svgLoader from 'vite-svg-loader';
+import virtualModule from './plugins/vite-plugin-virtual-module';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -26,6 +27,7 @@ export default defineConfig({
       fix: true,
     }),
     svgLoader(),
+    virtualModule(), // 虚拟模块
   ],
   resolve: {
     // 别名，@rollup/plugin-alias的入口
@@ -50,4 +52,5 @@ export default defineConfig({
       generateScopedName: '[name]__[local]___[hash:base64:5]', // name 表示当前文件名，local 表示类名，5表示生成的哈希值长度
     },
   },
+  optimizeDeps: {},
 });
