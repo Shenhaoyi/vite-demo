@@ -12,8 +12,10 @@ import logo from '@/assets/logo.png';
 import Icon from '@/assets/union.svg';
 import test from '@/config/test.json';
 import fib from 'virtual:fib';
+import env from 'virtual:env';
 console.log(test);
 console.log('shen log: ', { fib5: fib(5) });
+console.log('shen log: ', { env });
 </script>
 
 <style lang="less" scoped>
