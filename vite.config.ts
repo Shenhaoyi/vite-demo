@@ -4,8 +4,9 @@ import * as path from 'path';
 import Unocss from 'unocss/vite';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
-import svgLoader from 'vite-svg-loader';
+// import svgLoader from 'vite-svg-loader';
 import virtualModule from './plugins/vite-plugin-virtual-module';
+import svgLoader from './plugins/vite-plugin-vue-svg.js';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
