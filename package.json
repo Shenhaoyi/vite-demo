@@ -57,6 +57,7 @@
     "unocss": "^0.44.2",
     "vite": "^2.9.9",
     "vite-plugin-eslint": "^1.7.0",
+    "vite-plugin-inspect": "^0.6.0",
     "vite-plugin-stylelint": "^3.0.6",
     "vite-svg-loader": "^3.4.0",
     "vue-tsc": "^0.34.7"

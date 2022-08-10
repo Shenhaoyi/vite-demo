@@ -7,6 +7,7 @@ import viteStylelint from 'vite-plugin-stylelint';
 // import svgLoader from 'vite-svg-loader';
 import virtualModule from './plugins/vite-plugin-virtual-module';
 import svgLoader from './plugins/vite-plugin-vue-svg.js';
+import inspect from 'vite-plugin-inspect';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -29,6 +30,7 @@ export default defineConfig({
     }),
     svgLoader(),
     virtualModule(), // 虚拟模块
+    inspect(), // 插件检查
   ],
   resolve: {
     // 别名，@rollup/plugin-alias的入口

@@ -42,6 +42,7 @@ specifiers:
   unocss: ^0.44.2
   vite: ^2.9.9
   vite-plugin-eslint: ^1.7.0
+  vite-plugin-inspect: ^0.6.0
   vite-plugin-stylelint: ^3.0.6
   vite-svg-loader: ^3.4.0
   vue: ^3.2.25
@@ -92,6 +93,7 @@ devDependencies:
   unocss: 0.44.2_vite@2.9.14
   vite: 2.9.14_less@4.1.3
   vite-plugin-eslint: 1.7.0_eslint@8.21.0+vite@2.9.14
+  vite-plugin-inspect: 0.6.0_vite@2.9.14
   vite-plugin-stylelint: 3.0.6_jm5i3ygpxaprbzzvcghqh7ii34
   vite-svg-loader: 3.4.0
   vue-tsc: 0.34.17_typescript@4.7.4
@@ -4732,6 +4734,22 @@ packages:
       eslint: 8.21.0
       rollup: 2.77.2
       vite: 2.9.14_less@4.1.3
+    dev: true
+
+  /vite-plugin-inspect/0.6.0_vite@2.9.14:
+    resolution: {integrity: sha512-p2Ti5z+AscXx7JAW1nkU4bgiyKWW3O6D9UbaOEk+yz0v6R2E452OSukYhbs1zhqRnHL0W6ZsmG/lwz8aSQpSjg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      vite: ^3.0.0
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      debug: 4.3.4
+      kolorist: 1.5.1
+      sirv: 2.0.2
+      ufo: 0.8.5
+      vite: 2.9.14_less@4.1.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /vite-plugin-stylelint/3.0.6_jm5i3ygpxaprbzzvcghqh7ii34:
